@@ -17,8 +17,7 @@
 	2. Created a passwordless connection with all golang server
 	3. Created a Ansible playbook(ansible.yaml) for configure and deploment golang app
 	To configure all golang server run following from Ansible server
- 
-        $ ansible-playbook playbook/golang.yaml
+	$ ansible-playbook playbook/golang.yaml
 
 #### ELB 
 	http://foobar-terraform-elb-540723895.us-east-1.elb.amazonaws.com/

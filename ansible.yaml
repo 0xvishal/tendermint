@@ -20,6 +20,11 @@
       command: tar -C /usr/local -xzf go1.12.7.linux-amd64.tar.gz
       become: yes
 
+    - name: clone git repo
+      git:
+       repo: 'https://github.com/golang/example.git'
+       dest: /home/ubuntu/example
+
     - name: Kill running processes
       ignore_errors: yes
       command: fuser -k 8080/tcp
@@ -27,7 +32,4 @@
     - name: start golang app
       shell: nohup go run example/outyet/main.go > /dev/null 2>&1 &
 
-    - name: clone git repo
-      git:
-       repo: 'https://github.com/golang/example.git'
-       dest: /home/ubuntu/example
+

@@ -27,7 +27,7 @@
 #### To access common EC2 Instance 
  	  ssh -i tendermint.pem ubuntu@3.216.23.226
 
- We can access all private resources from common instance(3.216.23.226)
+####  We can access all private resources from common instance(3.216.23.226)
 	ssh golang1
 	ssh golang2
 	ssh golang3

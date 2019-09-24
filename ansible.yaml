@@ -20,7 +20,6 @@
       command: tar -C /usr/local -xzf go1.12.7.linux-amd64.tar.gz
       become: yes
 
-
     - name: Kill running processes
       ignore_errors: yes
       command: fuser -k 8080/tcp

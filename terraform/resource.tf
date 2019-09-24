@@ -4,18 +4,24 @@ resource "aws_key_pair" "deployer" {
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCAJB/kErvYsQN14ioWg87mGJTSWJq9dk1hjCQ1nsXgTx4WKSyu9IIJ993IhJ/3ogOw2wIMIP8L3uUqaPqq9MuLQu9ohaHGawjk206TJKwZ9Ld3ISGNLn2uXoI4I4ytJT3Mn7KP0YYGUEu+2wrxyUGxSIGGyNk6dg9M0HW0V3TJywaVCreBH1TLqwZmj6qnbkycZxIe8mJoRiJSgP7akSWIKlnKle2fQ/kHeF0NZysWvlNjdrtkhuk6hqFge4H34WIuif8E20p8qA5Ky5a7JK5S8o5SwtK/Y7g88wFRfXhRLQl8587qz4jujTvwq78g/h2QieCPppZK5T4nAVUcxsNd vishal"
 }
 
-# Define webserver inside the public subnet
-resource "aws_instance" "access" {
+# Define common EC2 the public subnet
+resource "aws_instance" "common" {
    ami  = "ami-0cfee17793b08a293"
    instance_type = "t2.nano"
    key_name = "${aws_key_pair.deployer.id}"
    subnet_id = "${aws_subnet.public-subnet1.id}"
    vpc_security_group_ids = ["${aws_security_group.public.id}"]
    associate_public_ip_address = true
+   user_data = <<USER_DATA
+#!/bin/bash
+sudo apt-get update
+sudo hostname common
+sudo echo "common" > /etc/hostname
+sudo echo "127.0.0.1 common" >> /etc/hosts
+   USER_DATA
    source_dest_check = false
-
   tags {
-    Name = "multiserver-access"
+    Name = "common"
   }
 
 }

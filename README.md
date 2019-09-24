@@ -6,6 +6,11 @@
 	5. 1 Ansible server in private subnet
 	6. 1 EC2 instance in public subnet to access all resources in private subnets 
 	
+#### Create all resources using Terraform
+	$ terraform init
+	$ terraform plan
+	$ terraform apply
+
 #### Ansible
 	1. All prerequisite setup by Terraform
 	2. Created a passwordless connection with all golang server
@@ -25,12 +30,15 @@
 	ansible: 10.0.0.196 (Private)
 	
 #### To access common EC2 Instance 
- 	  ssh -i tendermint.pem ubuntu@3.216.23.226
+ 	  $ ssh -i tendermint.pem ubuntu@3.216.23.226
 
 ####  We can access all private resources from common instance(3.216.23.226)
-	ssh golang1
-	ssh golang2
-	ssh golang3
-	ssh ansible
- 
+	$ ssh golang1
+	$ ssh golang2
+	$ ssh golang3
+	$ ssh ansible
+
+#### tendermint.pem shared in Email 
+
+
           	 

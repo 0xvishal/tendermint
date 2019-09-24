@@ -25,8 +25,7 @@
 	ansible: 10.0.0.196 (Private)
 	
 #### To access common EC2 Instance 
-	```sh
  	  ssh -i tendermint.pem ubuntu@3.216.23.226
-	```
+          we can access all private resources from common instance(3.216.23.226)
  
           	 

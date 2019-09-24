@@ -28,6 +28,5 @@
 	```sh
  	ssh -i tendermint.pem ubuntu@3.216.23.226
 	```
-          we can access all private resources from common instance(3.216.23.226)
  
           	 

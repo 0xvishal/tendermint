@@ -26,7 +26,7 @@
 	
 #### To access common EC2 Instance 
 	```sh
- 	ssh -i tendermint.pem ubuntu@3.216.23.226
+ 	  ssh -i tendermint.pem ubuntu@3.216.23.226
 	```
  
           	 

@@ -42,7 +42,9 @@
 	$ ssh golang3
 	$ ssh ansible
 
-#### tendermint.pem shared in Email 
+#### tendermint.pem file shared in Email 
+#### In case I have missed or need to change anything please let me know.
+
 
 
           	 

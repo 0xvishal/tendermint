@@ -7,6 +7,7 @@
 	6. 1 EC2 instance in public subnet to access all resources in private subnets 
 	
 #### Create all resources using Terraform
+	Go to in terraform directory and run following commands
 	$ terraform init
 	$ terraform plan
 	$ terraform apply

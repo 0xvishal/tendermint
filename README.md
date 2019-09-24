@@ -18,8 +18,8 @@
 
 #### Resoures access 
 	All resoures have a user ubuntu
-	Common: 3.216.23.226 (Public)
-        golang1: 10.0.0.200 (Private)
+	common: 3.216.23.226 (Public)
+	golang1: 10.0.0.200 (Private)
 	golang2: 10.0.0.142 (Private)
 	golang3: 10.0.0.180 (Private)
 	ansible: 10.0.0.196 (Private)

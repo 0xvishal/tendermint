@@ -4,6 +4,7 @@
 	3. 1 ELB for golang app
 	4. 3 golang EC2 Instances in private subnets with identical AZ
 	5. 1 Ansible server in private subnet
+	6. 1 EC2 instance in public subnet to access all resources in private subnets 
 	
 #### Ansible
 	1. All prerequisite setup by Terraform
@@ -15,5 +16,4 @@
 #### DNS
 	http://tenermint.redmonkey.in/
 
-	 
-
+#### 	 
